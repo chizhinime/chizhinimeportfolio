@@ -236,7 +236,7 @@ export default function Contact() {
                     {/* Form Container */}
                     <div className="relative">
                       <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?embedded=true"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?usp=preview"
                         width="100%"
                         height={isMobile ? "500" : "689"}
                         frameBorder="0"
