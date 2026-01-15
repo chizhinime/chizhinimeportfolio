@@ -235,8 +235,9 @@ export default function Contact() {
                     
                     {/* Form Container */}
                     <div className="relative">
+                      {/* UPDATED IFRAME URL - Removed the preview parameter */}
                       <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?usp=preview"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?embedded=true"
                         width="100%"
                         height={isMobile ? "500" : "689"}
                         frameBorder="0"
@@ -244,12 +245,14 @@ export default function Contact() {
                         marginWidth={0}
                         className="w-full"
                         title="Contact Form"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
                       >
                         Loading…
                       </iframe>
                       
-                      {/* Loading Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-emerald-50 to-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                      {/* Loading Indicator */}
+                      <div className="absolute inset-0 bg-white/80 flex items-center justify-center transition-opacity duration-300" id="form-loading">
                         <div className="text-center p-4">
                           <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-emerald-100 to-green-100 rounded-full flex items-center justify-center">
                             <svg className="w-6 h-6 text-emerald-600 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -257,7 +260,7 @@ export default function Contact() {
                               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                             </svg>
                           </div>
-                          <p className="text-sm text-emerald-700">Form loaded successfully</p>
+                          <p className="text-sm text-emerald-700">Loading form...</p>
                         </div>
                       </div>
                     </div>
@@ -284,7 +287,7 @@ export default function Contact() {
                           </li>
                           <li className="flex items-center">
                             <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2" />
-                            Check your email for my response within 24 hours
+                            You'll receive a confirmation after submission
                           </li>
                         </ul>
                       </div>
@@ -300,7 +303,6 @@ export default function Contact() {
           </div>
         </div>
 
-       
         {/* Alternative Contact Methods */}
         <section className="mt-16 sm:mt-20 lg:mt-24">
           <div className="bg-gradient-to-r from-emerald-500/10 via-green-500/10 to-emerald-500/10 rounded-3xl p-8 sm:p-12 border border-emerald-200/50">
@@ -315,7 +317,7 @@ export default function Contact() {
                 Prefer Direct Contact?
               </h2>
               <p className="text-emerald-700/80 mb-8 text-base sm:text-lg">
-                If you prefer not to use the form, you can reach me directly through email or social media.
+                If you prefer not to use the form, you can reach me directly through email or WhatsApp.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
