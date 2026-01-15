@@ -222,48 +222,69 @@ export default function Contact() {
                     Contact Form
                   </h2>
                   
-                  {/* Google Form Embed */}
+                  {/* Option 1: Direct Form Embed */}
                   <div className="relative rounded-xl overflow-hidden border border-emerald-200 bg-white">
                     <div className="w-full h-12 bg-gradient-to-r from-emerald-500 to-green-500 flex items-center justify-center">
                       <div className="flex items-center text-white">
                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z" />
                         </svg>
-                        <span className="text-sm font-medium">Google Form</span>
+                        <span className="text-sm font-medium">Google Contact Form</span>
                       </div>
                     </div>
                     
                     {/* Form Container */}
                     <div className="relative">
-                      {/* UPDATED IFRAME URL - Removed the preview parameter */}
                       <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?embedded=true"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?usp=sf_link"
                         width="100%"
-                        height={isMobile ? "500" : "689"}
+                        height={isMobile ? "600" : "689"}
                         frameBorder="0"
                         marginHeight={0}
                         marginWidth={0}
                         className="w-full"
                         title="Contact Form"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
+                        style={{ minHeight: '500px' }}
                       >
                         Loading…
                       </iframe>
                       
-                      {/* Loading Indicator */}
-                      <div className="absolute inset-0 bg-white/80 flex items-center justify-center transition-opacity duration-300" id="form-loading">
+                      {/* Loading Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-emerald-50 to-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                         <div className="text-center p-4">
                           <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-emerald-100 to-green-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-emerald-600 animate-spin" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                            <svg className="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <p className="text-sm text-emerald-700">Loading form...</p>
+                          <p className="text-sm text-emerald-700">Form loaded successfully</p>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  
+                  {/* Alternative: Direct Link Button */}
+                  <div className="mt-6">
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdpo2QF5ZfB_XyLrPiXJrIDYsmtfwUD0cZYt40xgEvH-kZDow/viewform?usp=sf_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <div className="relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                        <div className="relative bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 hover:border-blue-300 transition-all duration-300">
+                          <div className="flex items-center justify-center">
+                            <svg className="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-sm font-medium text-blue-700">
+                              Open form in new tab if it doesn't load properly
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                   
                   {/* Form Instructions */}
@@ -287,7 +308,11 @@ export default function Contact() {
                           </li>
                           <li className="flex items-center">
                             <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2" />
-                            You'll receive a confirmation after submission
+                            Check your email for my response within 24 hours
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2" />
+                            Use the "Open in new tab" button if form doesn't load
                           </li>
                         </ul>
                       </div>
@@ -317,7 +342,7 @@ export default function Contact() {
                 Prefer Direct Contact?
               </h2>
               <p className="text-emerald-700/80 mb-8 text-base sm:text-lg">
-                If you prefer not to use the form, you can reach me directly through email or WhatsApp.
+                If you prefer not to use the form, you can reach me directly through email or social media.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
