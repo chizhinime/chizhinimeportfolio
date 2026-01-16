@@ -4,52 +4,46 @@ import Card from "../components/Card";
 
 const projects = [
   {
+    title: "BrandPawa",
+    description: "A brand strategy platform that gives you instant clarity, powerful strategy, and tools to build a brand that dominates your market. Features include brand analysis and growth tools.",
+    liveUrl: "https://brandpawa.com",
+    technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Analytics"],
+    imageUrl: "/brandpawa.png"
+  },
+  {
+    title: "GODDED SEED CONFAB",
+    description: "An event platform for the GODDED SEED CONFAB 2025 happening in Port Harcourt and Lagos. Features event information, registration, and location details for both venues.",
+    liveUrl: "https://godded-seed.vercel.app",
+    technologies: ["React", "Event Management", "Responsive Design", "Map Integration"],
+    imageUrl: "/goddedseed.png"
+  },
+  {
+    title: "Chizhinime Portfolio",
+    description: "A personal portfolio website showcasing education, certifications, volunteer experience, and technical skills in full-stack development using modern web technologies.",
+    liveUrl: "https://chizhinimeportfolio.vercel.app",
+    technologies: ["Portfolio", "Responsive Design", "Web Development", "UI/UX"],
+    imageUrl: "/myporfolio.png"
+  },
+  {
+    title: "TEDxAda George Road Youth",
+    description: "An independently organized TEDx event platform spotlighting ideas, stories, and people shaping Port Harcourt. Features event details, ticket purchasing, and live audience registration.",
+    liveUrl: "https://tedxadageorgeroadyouth.com",
+    technologies: ["Event Platform", "TEDx", "Ticketing System", "Community Engagement"],
+    imageUrl: "/tedxadageorge.png"
+  },
+  {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce website built with Next.js, TypeScript, and Stripe integration. Features include product catalog, shopping cart, user authentication, and payment processing.",
     liveUrl: "#",
-    githubUrl: "#",
     technologies: ["Next.js", "TypeScript", "TailwindCSS", "Stripe", "MongoDB"],
     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio website showcasing projects and skills. Built with modern web technologies and featuring responsive design, 3D effects, and smooth animations.",
-    liveUrl: "#",
-    githubUrl: "#",
-    technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion"],
-    imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Perfect for project management.",
     liveUrl: "#",
-    githubUrl: "#",
     technologies: ["React", "Node.js", "Socket.io", "PostgreSQL", "Material-UI"],
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics. Includes dark mode and offline capabilities.",
-    liveUrl: "#",
-    githubUrl: "#",
-    technologies: ["JavaScript", "OpenWeather API", "Chart.js", "Leaflet", "PWA"],
-    imageUrl: "https://images.unsplash.com/photo-1589810264341-f89f6c7d5e81?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    title: "AI Chat Assistant",
-    description: "An intelligent chat assistant powered by OpenAI's API. Features conversational AI, context awareness, and multi-language support with a sleek interface.",
-    liveUrl: "#",
-    githubUrl: "#",
-    technologies: ["Next.js", "OpenAI API", "Express.js", "Redis", "WebSockets"],
-    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    title: "Fitness Tracking App",
-    description: "A comprehensive fitness application with workout tracking, progress analytics, and personalized recommendations. Includes social features and achievement system.",
-    liveUrl: "#",
-    githubUrl: "#",
-    technologies: ["React Native", "Firebase", "Redux", "Chart.js", "Google Fit API"],
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
 ];
 
@@ -67,7 +61,7 @@ export default function Projects() {
           <div className="relative z-10">
             <div className="inline-flex items-center justify-center p-3 mb-6 bg-gradient-to-r from-emerald-100 to-green-100 rounded-2xl">
               <svg className="w-8 h-8 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path fillRule="evenodd" d="M12.316 3.051a1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </div>
             
@@ -92,7 +86,7 @@ export default function Projects() {
                 title={project.title}
                 description={project.description}
                 liveUrl={project.liveUrl}
-                githubUrl={project.githubUrl}
+                githubUrl={null}
                 technologies={project.technologies}
                 imageUrl={project.imageUrl}
               />
