@@ -7,6 +7,7 @@ const projects = [
     title: "BrandPawa",
     description: "A brand strategy platform that gives you instant clarity, powerful strategy, and tools to build a brand that dominates your market. Features include brand analysis and growth tools.",
     liveUrl: "https://brandpawa.com",
+    githubUrl: "", // Empty string instead of null
     technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Analytics"],
     imageUrl: "/brandpawa.png"
   },
@@ -14,6 +15,7 @@ const projects = [
     title: "GODDED SEED CONFAB",
     description: "An event platform for the GODDED SEED CONFAB 2025 happening in Port Harcourt and Lagos. Features event information, registration, and location details for both venues.",
     liveUrl: "https://godded-seed.vercel.app",
+    githubUrl: "",
     technologies: ["React", "Event Management", "Responsive Design", "Map Integration"],
     imageUrl: "/goddedseed.png"
   },
@@ -21,6 +23,7 @@ const projects = [
     title: "Chizhinime Portfolio",
     description: "A personal portfolio website showcasing education, certifications, volunteer experience, and technical skills in full-stack development using modern web technologies.",
     liveUrl: "https://chizhinimeportfolio.vercel.app",
+    githubUrl: "",
     technologies: ["Portfolio", "Responsive Design", "Web Development", "UI/UX"],
     imageUrl: "/myporfolio.png"
   },
@@ -28,6 +31,7 @@ const projects = [
     title: "TEDxAda George Road Youth",
     description: "An independently organized TEDx event platform spotlighting ideas, stories, and people shaping Port Harcourt. Features event details, ticket purchasing, and live audience registration.",
     liveUrl: "https://tedxadageorgeroadyouth.com",
+    githubUrl: "",
     technologies: ["Event Platform", "TEDx", "Ticketing System", "Community Engagement"],
     imageUrl: "/tedxadageorge.png"
   },
@@ -35,6 +39,7 @@ const projects = [
     title: "E-commerce Platform",
     description: "A full-featured e-commerce website built with Next.js, TypeScript, and Stripe integration. Features include product catalog, shopping cart, user authentication, and payment processing.",
     liveUrl: "#",
+    githubUrl: "#",
     technologies: ["Next.js", "TypeScript", "TailwindCSS", "Stripe", "MongoDB"],
     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
@@ -42,6 +47,7 @@ const projects = [
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Perfect for project management.",
     liveUrl: "#",
+    githubUrl: "#",
     technologies: ["React", "Node.js", "Socket.io", "PostgreSQL", "Material-UI"],
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
@@ -86,7 +92,7 @@ export default function Projects() {
                 title={project.title}
                 description={project.description}
                 liveUrl={project.liveUrl}
-                githubUrl={null}
+                githubUrl={project.githubUrl}
                 technologies={project.technologies}
                 imageUrl={project.imageUrl}
               />
