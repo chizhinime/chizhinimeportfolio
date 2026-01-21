@@ -27,6 +27,17 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://tpc.googlesyndication.com" />
 
           <meta name="google-site-verification" content="jTPacNP2iXSpygKPXKweJ8YUEiP-EZxQjHNUinRvuPw" />
+
+          
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CJ15JB804"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9CJ15JB804');
+</script>
         </Head>
         <body>
           <Main />
