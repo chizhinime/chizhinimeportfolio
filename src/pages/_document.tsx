@@ -25,6 +25,8 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
           <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
           <link rel="preconnect" href="https://tpc.googlesyndication.com" />
+
+          <meta name="google-site-verification" content="jTPacNP2iXSpygKPXKweJ8YUEiP-EZxQjHNUinRvuPw" />
         </Head>
         <body>
           <Main />
