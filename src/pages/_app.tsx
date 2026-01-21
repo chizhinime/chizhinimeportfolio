@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
+import Head from "next/head";
 import Loading from '../components/Loading';
 import '../styles/globals.css';
 
@@ -38,6 +39,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>Chizhinime Portfolio</title>
+        <meta name="description" content="Chizhinime Portfolio"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      </Head>
       {loading && <Loading />}
       <div className={`min-h-screen flex flex-col transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         <Component {...pageProps} />
